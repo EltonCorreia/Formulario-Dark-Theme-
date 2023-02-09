@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body * {
+
+    box-sizing: border-box;
+
+}
+
+.main-login{
+
+    width: 100vw;
+    /* "vw" = viewport (tela do computador)
+    - representa a porcentagem da viewport (o quanto irá aparecer ena tela em porcentagem) */
+    height: 100vh;
+    background: rgb(12,55,112);
+    background: linear-gradient(90deg, rgba(12,55,112,1) 5%, rgba(9,15,75,1) 95%);
+    display: flex;
+    /* "Flex" faz com que o contéudo fica de lado a lado */
+    justify-content: center;
+    /* justifica o contéudo no eixo X (horizonte) */
+    align-items: center;
+    /* justifica o contéudo no eixo Y (vertical) */
+}
+
+.left-login{
+
+    width: 50vw;
+    /* irá ocupar 50% da tela */
+    height: 100vh;
+    /* irá ocupar 100% dos 50% da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+    
+    font-size: 2.5vw;
+    color:#f0ffffde;
+
+}
+
+.left-login-imagem{
+
+    width: 30vw;
+
+}
+
+.right-login{
+
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-login{
+
+    width: 60%;
+    /* irá ocupar 60% dos 50vw da "right-login" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    /* "margens de dentro" - primeiro valor representa o eixo X e o segundo o eixo Y */
+    background: rgb(12,55,112);
+    border-radius: 20px;
+    /* arrendonda a borda */
+    /* box-shadow: o primeiro valor é a direção da sombra, o segundo é se a sombra vai pra cima ou pra baixo, o terceiro valor é o blur e o quarto é a cor */
+    
+}
+.card-login > h1 {
+
+    color: #f0ffffde;
+    font-weight: 550;
+    /* grossura da fonte */
+    margin: 0;
+    font-size: 25pt;
+
+}
+
+.textfield{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* quando usamos o "flex-direction" os eixos se invertem */
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+
+}
+
+.textfield > input{
+
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #484e69;
+    color:#f0ffffde;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    
+}
+
+.textfield > label{
+
+    color: #f0ffffde;
+    font-size: 11pt;
+    padding: 5px;
+}
+
+.textfield > input::placeholder{
+
+    color: #f0ffffde;
+
+}
+
+.btn-login{
+
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgb(29, 29, 29);
+    background: #0550a0;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 950px){
+
+    .card-login{
+
+        width: 85%;
+
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .main-login{
+
+        flex-direction: column;
+
+    }
+
+    .left-login > h1{
+
+        display: none;
+
+    }
+
+    .left-login{
+
+        width: 100%;
+        height: auto;
+
+        }
+
+    .left-login-imagem{
+
+        width: 50vw;
+
+    }
+
+    .card-login{
+
+        width: 90%;
+    }
+
+}
